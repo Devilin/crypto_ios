@@ -1,6 +1,6 @@
 import Foundation
 
-struct Event: Identifiable, Decodable {
+struct Event: Identifiable, Decodable, Equatable {
     let id = UUID()
     let name: String
     let date: Date
