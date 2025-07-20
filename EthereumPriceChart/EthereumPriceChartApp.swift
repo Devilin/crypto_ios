@@ -7,7 +7,9 @@ struct EthereumPriceChartApp: App {
             NavigationView {
                 PriceChartView()
                     .navigationTitle("Ethereum Price")
+                    #if os(iOS)
                     .navigationBarTitleDisplayMode(.inline)
+                    #endif
             }
         }
     }
