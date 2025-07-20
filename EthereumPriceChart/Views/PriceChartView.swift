@@ -88,7 +88,7 @@ struct PriceChartView: View {
                     )
                     .interpolationMethod(.cardinal)
                     .foregroundStyle(Color.blue.gradient)
-                    .lineWidth(2)
+                    .lineStyle(StrokeStyle(lineWidth: 2))
                 }
                 
                 // Event annotations
@@ -107,8 +107,9 @@ struct PriceChartView: View {
                 }
             }
             .chartXAxis {
-                AxisMarks { value in
+                AxisMarks(values: .automatic) { _ in
                     AxisGridLine()
+                    AxisTick()
                     AxisValueLabel()
                 }
             }
