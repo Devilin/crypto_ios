@@ -22,7 +22,10 @@ let package = Package(
         .target(
             name: "EthereumPriceChart",
             dependencies: [],
-            path: "EthereumPriceChart"
+            path: "EthereumPriceChart",
+            resources: [
+                .process("../events.json")
+            ]
         )
     ]
 )
