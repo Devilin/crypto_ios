@@ -98,11 +98,32 @@ struct PriceChartView: View {
                         y: .value("Price", priceAtDate(event.date) ?? 0)
                     )
                     .annotation(position: .top) {
-                        Image(systemName: "circle.fill")
-                            .foregroundStyle(eventColor(for: event))
+                        VStack(spacing: 2) {
+                            // Triangle pointing down
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .font(.system(size: 12))
+                                .foregroundColor(eventColor(for: event))
+                            
+                            // Circle marker
+                            ZStack {
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 20, height: 20)
+                                    .shadow(radius: 2)
+                                
+                                Circle()
+                                    .fill(eventColor(for: event))
+                                    .frame(width: 16, height: 16)
+                                
+                                Image(systemName: "exclamationmark")
+                                    .font(.system(size: 8, weight: .bold))
+                                    .foregroundColor(.white)
+                            }
                             .onTapGesture {
                                 viewModel.selectEvent(event)
                             }
+                        }
+                        .offset(y: 10) // Adjust vertical position
                     }
                 }
             }

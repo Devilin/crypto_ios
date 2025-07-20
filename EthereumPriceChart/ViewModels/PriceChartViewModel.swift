@@ -23,17 +23,31 @@ class PriceChartViewModel: ObservableObject {
     }
     
     private func loadEvents() {
+        print("Attempting to load events.json...")
         guard let url = Bundle.main.url(forResource: "events", withExtension: "json") else {
-            print("Failed to find events.json")
+            print("❌ Failed to find events.json in bundle")
+            print("Bundle resources: \(Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: nil) ?? [])")
             return
         }
         
+        print("✅ Found events.json at: \(url.path)")
+        
         do {
             let data = try Data(contentsOf: url)
-            let eventsData = try JSONDecoder().decode(EventsData.self, from: data)
+            print("✅ Successfully loaded \(data.count) bytes of data")
+            
+            let decoder = JSONDecoder()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            
+            let eventsData = try decoder.decode(EventsData.self, from: data)
             self.events = eventsData.pastEvents + eventsData.upcomingEvents
+            print("✅ Successfully decoded \(self.events.count) events")
+            print("First event: \(self.events.first?.name ?? "none")")
         } catch {
-            print("Error decoding events: \(error)")
+            print("❌ Error decoding events: \(error)")
+            print("Error details: \(error.localizedDescription)")
         }
     }
     
