@@ -1,0 +1,67 @@
+{
+    "past_events": [
+      {
+        "name": "The Merge (PoW to PoS)",
+        "date": "2022-09-15",
+        "impact": "Upward",
+        "news_example": "Ethereum transitioned to Proof-of-Stake on 15 Sep 2022, cutting energy usage by over 99%."
+      },
+      {
+        "name": "Dencun Upgrade (Proto-Danksharding)",
+        "date": "2024-03-13",
+        "impact": "Upward",
+        "news_example": "Ethereum’s Dencun upgrade went live on 13 Mar 2024, reducing layer-2 fees significantly."
+      },
+      {
+        "name": "Spot ETH ETF Approval",
+        "date": "2024-05-23",
+        "impact": "Upward",
+        "news_example": "SEC approved several spot Ether ETFs, boosting institutional demand for Ethereum."
+      },
+      {
+        "name": "Bybit Hack (~$1.5B ETH stolen)",
+        "date": "2025-02-21",
+        "impact": "Downward",
+        "news_example": "Bybit reported one of the largest crypto heists with over $1.5 billion in ETH stolen."
+      },
+      {
+        "name": "Pectra Upgrade (Account Abstraction)",
+        "date": "2025-05-07",
+        "impact": "Upward",
+        "news_example": "Ethereum implemented the Pectra upgrade, introducing paymasters and improved wallet usability."
+      }
+    ],
+    "upcoming_events": [
+      {
+        "name": "SEC Approval of Staking in ETH ETFs",
+        "date": "2025-12-31",
+        "impact": "Potential Upward",
+        "news_example": "Analysts expect SEC to rule on staking within ETH ETFs by the end of 2025, potentially unlocking new inflows."
+      },
+      {
+        "name": "GENIUS & CLARITY Acts (Stablecoin Regulation)",
+        "date": "2025-08-31",
+        "impact": "Upward",
+        "news_example": "Stablecoin-focused U.S. bills such as the GENIUS and CLARITY Acts are gaining traction and could improve Ethereum's regulatory landscape."
+      },
+      {
+        "name": "Pectra Post-Upgrade Adoption Metrics",
+        "date": "2025-10-01",
+        "impact": "Upward",
+        "news_example": "Post-upgrade, Ethereum may benefit from increasing user migration to smart accounts and efficient L2 transactions."
+      },
+      {
+        "name": "Institutional Accumulation (e.g. BitMine)",
+        "date": "2025-07-15",
+        "impact": "Upward",
+        "news_example": "BitMine, backed by Founders Fund, acquired 160k ETH, signaling strong institutional confidence."
+      },
+      {
+        "name": "U.S. CPI, FOMC, and PPI Releases",
+        "date": "2025-07-31",
+        "impact": "Mixed",
+        "news_example": "U.S. macroeconomic data (CPI, PPI, FOMC) expected late July could trigger volatility across all crypto markets."
+      }
+    ]
+  }
+  
