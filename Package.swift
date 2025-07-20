@@ -5,7 +5,7 @@ let package = Package(
     name: "EthereumPriceChart",
     platforms: [.iOS(.v16)],
     products: [
-        .app(
+        .library(
             name: "EthereumPriceChart",
             targets: ["EthereumPriceChart"]
         )
